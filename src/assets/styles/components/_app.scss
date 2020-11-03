@@ -1,0 +1,21 @@
+.app {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: $background;
+    min-height: 100vh;
+
+    &__background-item {
+        position: absolute;
+        min-width: 673px;
+        top: -120px;
+        left: -45px;
+        z-index: 0;
+
+        @include media-breakpoint-up(lg){
+            top: 0;
+        }
+    }
+}

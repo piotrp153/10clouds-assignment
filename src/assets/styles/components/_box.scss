@@ -1,0 +1,84 @@
+.box {
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(lg){
+        min-height: 556px;
+    }
+
+    &__image {
+        display: none;
+
+        @include media-breakpoint-up(lg){
+            position: relative;
+            width: 256px;
+            background: url('../../images/background.png') center no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $textColor;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .image {
+            &__item {
+                z-index: 2;
+                padding: 98px 0 80px 12px;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: calc(100vw - 20px);
+        background: $white;
+        padding: 15px;
+        max-width: 300px;
+
+        @include media-breakpoint-up(lg){
+            padding: 42px 51px;
+            width: 472px;
+            max-width: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            top: -1px;
+            left: 15px;
+            background: $main;
+
+            @include media-breakpoint-up(lg){
+                left: 51px;
+            }
+        }
+
+        .content {
+            &__text {
+                margin-bottom: 30px;
+
+                @include media-breakpoint-up(lg){
+                    margin-bottom: 50px;
+                }
+    
+                br {
+                    display: none;
+    
+                    @include media-breakpoint-up(lg){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

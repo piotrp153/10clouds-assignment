@@ -1,0 +1,48 @@
+.box {
+    &__navigation {
+        display: none;
+
+        @include media-breakpoint-up(lg){
+            display: block;
+            margin-top: 109px;
+        }
+
+        .navigation {
+            &__item {
+                position: relative;
+                padding: 8px;
+                margin-bottom: 63px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 2px;
+                    top: 0;
+                    left: 0;
+                    background: $navigationBelt;
+                    opacity: 0.25;
+                }
+
+                .item {
+                    &__text {
+                        color: $white;
+                    }
+                }
+
+                &--active {
+                    margin-bottom: 39px;
+
+                    &:before {
+                        background: $main;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

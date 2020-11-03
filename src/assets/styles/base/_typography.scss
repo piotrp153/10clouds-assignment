@@ -1,0 +1,79 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+    color: $textColor;
+    font: normal 125% / 1.2 $primary;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+h1 {
+    font-family: $primary;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 300; 
+    color: $white;
+
+    @include media-breakpoint-up(lg){
+        font-size: 48px;
+        line-height: 48px;
+    }
+}
+
+p {
+    font-family: $primary;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400; 
+    letter-spacing: 0.28px;
+    color: $textColor;
+
+
+    &.small {
+        font-size: 11px;
+        line-height: 11px;
+    }
+
+    &.error {
+        font-size: 11px;
+        line-height: 11px;
+    }
+}
+
+label {
+    font-family: $primary;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 400;
+    color: $labelColor;
+}
+
+input {
+    font-family: $primary;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    color: $labelColor;
+
+    &[type="submit"] {
+        font-family: $primary;
+        font-size: 12px;
+        line-height: 28px;
+        font-weight: 500;
+        letter-spacing: 0.48px;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    &[type="radio"] {
+        + p {
+            font-family: $primary;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 400;
+        }
+    }
+}

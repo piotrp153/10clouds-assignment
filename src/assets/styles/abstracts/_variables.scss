@@ -1,0 +1,28 @@
+// Fonts
+$primary: 'Roboto', sans-serif;
+
+
+//Colors 
+$white: #FFFFFF;
+$main: #1BFEC0;
+$error: #EB5757;
+$navigationBelt: #F9F9FB;
+$textColor: #202020;
+$labelColor: #333333;
+$background: #242424;
+$inputBorder: #DADAED;
+$inputBorderActive: #652AE6;
+$submitStartGradient: #8658EB;
+$submitEndGradient: #652AE6;
+$submitAfterBackground: #7841F4;
+$separatorColor: #A2A2AF;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1650px,
+) !default;
